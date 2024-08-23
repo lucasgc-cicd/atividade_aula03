@@ -1,0 +1,17 @@
+name: HelloWorld
+
+on: push
+
+jobs:
+  hello-world:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Running hello
+      run: "echo Hello world"
+    - name: Running linux version
+      run: |
+        echo Running on Linux
+        uname -a
